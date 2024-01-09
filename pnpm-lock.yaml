@@ -5,9 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@emotion/is-prop-valid':
+    specifier: 1.0.0
+    version: 1.0.0
   bootstrap:
     specifier: ^5.3.2
     version: 5.3.2(@popperjs/core@2.11.8)
+  bootstrap-icons:
+    specifier: ^1.11.3
+    version: 1.11.3
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -19,7 +25,7 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   styled-components:
     specifier: ^6.1.7
-    version: 6.1.7(react-dom@18.2.0)(react@18.2.0)
+    version: 6.1.7(@emotion/is-prop-valid@1.0.0)(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@types/react':
@@ -284,6 +290,16 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
     dev: true
+
+  /@emotion/is-prop-valid@1.0.0:
+    resolution: {integrity: sha512-G5X0t7eR9pkhUvAY32QS3lToP9JyNF8It5CcmMvbWjmC9/Yq7IhevaKqxl+me2BKR93iTPiL/h3En1ZX/1G3PQ==}
+    dependencies:
+      '@emotion/memoize': 0.7.5
+    dev: false
+
+  /@emotion/memoize@0.7.5:
+    resolution: {integrity: sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==}
+    dev: false
 
   /@esbuild/aix-ppc64@0.19.11:
     resolution: {integrity: sha512-FnzU0LyE3ySQk7UntJO4+qIiQgI7KoODnZg5xzXIrFJlKd2P2gwHsHY4927xj9y5PJmJSzULiUCWmv7iWnNa7g==}
@@ -955,6 +971,10 @@ packages:
   /balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
+
+  /bootstrap-icons@1.11.3:
+    resolution: {integrity: sha512-+3lpHrCw/it2/7lBL15VR0HEumaBss0+f/Lb6ZvHISn1mlK83jjFpooTLsMWbIjJMDjDjOExMsTxnXSIT4k4ww==}
+    dev: false
 
   /bootstrap@5.3.2(@popperjs/core@2.11.8):
     resolution: {integrity: sha512-D32nmNWiQHo94BKHLmOrdjlL05q1c8oxbtBphQFb9Z5to6eGRDCm0QgeaZ4zFBHzfg2++rqa2JkqCcxDy0sH0g==}
@@ -2338,7 +2358,7 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /styled-components@6.1.7(react-dom@18.2.0)(react@18.2.0):
+  /styled-components@6.1.7(@emotion/is-prop-valid@1.0.0)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-d8LumygXGnb+MVc36gi4o25emEDYOPtj9UpHsTZYU4gxLKSUzRddlERXSPSK6SkTMFAVpSo3LmaXES0YGrddMg==}
     engines: {node: '>= 16'}
     peerDependencies:
@@ -2372,6 +2392,7 @@ packages:
       tslib:
         optional: true
     dependencies:
+      '@emotion/is-prop-valid': 1.0.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       stylis: 4.3.1
